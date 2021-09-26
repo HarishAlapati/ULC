@@ -26,6 +26,7 @@ public class Base {
 		prop=PropertyFileReader.LoadFile();
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
 		{
+			System.setProperty("webdriver.chrome.silentOutput","true");//new
 			System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
 			driver= new ChromeDriver();
 		}
